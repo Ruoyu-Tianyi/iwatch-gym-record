@@ -1,0 +1,71 @@
+name: Upload to TestFlight
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: repflow-testflight
+  cancel-in-progress: false
+jobs:
+  beta:
+    runs-on: macos-15
+    timeout-minutes: 45
+    env:
+      APPLE_TEAM_ID: ${{ vars.APPLE_TEAM_ID }}
+      APP_BUNDLE_ID: ${{ vars.APP_BUNDLE_ID }}
+      APP_VERSION: ${{ vars.APP_VERSION || '1.0.0' }}
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      ASC_API_KEY_P8: ${{ secrets.ASC_API_KEY_P8 }}
+      MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+      GITHUB_TOKEN: ${{ github.token }}
+      GH_TOKEN: ${{ github.token }}
+      FASTLANE_SKIP_UPDATE_CHECK: 'true'
+      FASTLANE_HIDE_CHANGELOG: 'true'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check release prerequisites
+        run: |
+          for name in APPLE_TEAM_ID APP_BUNDLE_ID ASC_KEY_ID ASC_ISSUER_ID ASC_API_KEY_P8 MATCH_PASSWORD; do
+            if [[ -z "${!name}" ]]; then echo "Missing repository variable/secret: $name"; exit 1; fi
+          done
+          test "$(gh api "repos/$GITHUB_REPOSITORY" --jq .private)" = true || {
+            echo 'Encrypted signing assets must be kept in a private repository.'; exit 1;
+          }
+      - name: Select Xcode 26 or newer
+        run: |
+          candidate=$(python3 -c 'import pathlib,re; p=[p for p in pathlib.Path("/Applications").glob("Xcode_*.app") if re.search(r"Xcode_\d",p.name) and "beta" not in p.name.lower()]; print(max(p,key=lambda x:tuple(map(int,re.findall(r"\d+",x.name))),default=""))')
+          if [ -n "$candidate" ]; then sudo xcode-select -s "$candidate/Contents/Developer"; fi
+          xcodebuild -version
+          version=$(xcodebuild -version | head -1 | awk '{print $2}' | cut -d. -f1)
+          test "$version" -ge 26
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+      - name: Install build tools
+        run: |
+          brew install xcodegen
+          bundle install
+      - name: Configure identifiers and version
+        run: |
+          python3 scripts/configure-release.py
+          xcodegen generate --spec project.yml
+      - name: Create encrypted signing branch if needed
+        run: ./scripts/prepare-signing-branch.sh
+      - name: Sign, archive and upload
+        run: bundle exec fastlane ios beta
+      - name: Upload build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RepFlow-TestFlight-logs-${{ github.run_number }}
+          path: artifacts/release/build-logs/
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Write upload summary
+        if: success()
+        run: |
+          echo '## 已上传 TestFlight' >> "$GITHUB_STEP_SUMMARY"
+          echo '等待 Apple 处理构建后，在 App Store Connect 将它添加到内部测试组，再用 iPhone 上的 TestFlight 安装。' >> "$GITHUB_STEP_SUMMARY"

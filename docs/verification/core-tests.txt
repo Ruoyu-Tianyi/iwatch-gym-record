@@ -1,0 +1,95 @@
+Building for debugging...
+[0/2] Write swift-version-2399DB8E6F546A3E.txt
+Build complete! (0.21s)
+Test Suite 'All tests' started at 2026-10-07 03:57:40.102
+Test Suite 'debug.xctest' started at 2026-10-07 03:57:40.104
+Test Suite 'ModelsAndPlannerTests' started at 2026-10-07 03:57:40.104
+Test Case 'ModelsAndPlannerTests.testExerciseNormalizationBoundsAndInvalidWeights' started at 2026-10-07 03:57:40.104
+Test Case 'ModelsAndPlannerTests.testExerciseNormalizationBoundsAndInvalidWeights' passed (0.002 seconds)
+Test Case 'ModelsAndPlannerTests.testGeneratorAllCombinationsDeterministicAndWithinRequestedEquipment' started at 2026-10-07 03:57:40.106
+Test Case 'ModelsAndPlannerTests.testGeneratorAllCombinationsDeterministicAndWithinRequestedEquipment' passed (0.017 seconds)
+Test Case 'ModelsAndPlannerTests.testGeneratorClampsDaysAndChangesGoals' started at 2026-10-07 03:57:40.123
+Test Case 'ModelsAndPlannerTests.testGeneratorClampsDaysAndChangesGoals' passed (0.102 seconds)
+Test Case 'ModelsAndPlannerTests.testLegacyRecordsDecodeWithoutPerExerciseCompletion' started at 2026-10-07 03:57:40.224
+Test Case 'ModelsAndPlannerTests.testLegacyRecordsDecodeWithoutPerExerciseCompletion' passed (0.001 seconds)
+Test Case 'ModelsAndPlannerTests.testPlanRepairsDuplicateExerciseIdentityAndNormalizesTotals' started at 2026-10-07 03:57:40.225
+Test Case 'ModelsAndPlannerTests.testPlanRepairsDuplicateExerciseIdentityAndNormalizesTotals' passed (0.0 seconds)
+Test Case 'ModelsAndPlannerTests.testRecordDeduplicatesSetsSanitizesMetricsAndClampsCompletion' started at 2026-10-07 03:57:40.225
+Test Case 'ModelsAndPlannerTests.testRecordDeduplicatesSetsSanitizesMetricsAndClampsCompletion' passed (0.0 seconds)
+Test Case 'ModelsAndPlannerTests.testStarterPlansStableAndContainPriorityMovements' started at 2026-10-07 03:57:40.226
+Test Case 'ModelsAndPlannerTests.testStarterPlansStableAndContainPriorityMovements' passed (0.001 seconds)
+Test Suite 'ModelsAndPlannerTests' passed at 2026-10-07 03:57:40.227
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.123 (0.123) seconds
+Test Suite 'RepDetectorTests' started at 2026-10-07 03:57:40.227
+Test Case 'RepDetectorTests.testAnIncompleteSingleExcursionDoesNotCount' started at 2026-10-07 03:57:40.227
+Test Case 'RepDetectorTests.testAnIncompleteSingleExcursionDoesNotCount' passed (0.001 seconds)
+Test Case 'RepDetectorTests.testCountsAtDifferentReasonableTempos' started at 2026-10-07 03:57:40.228
+Test Case 'RepDetectorTests.testCountsAtDifferentReasonableTempos' passed (0.004 seconds)
+Test Case 'RepDetectorTests.testDominantAxisCanChangeAfterQuietPeriod' started at 2026-10-07 03:57:40.231
+Test Case 'RepDetectorTests.testDominantAxisCanChangeAfterQuietPeriod' passed (0.102 seconds)
+Test Case 'RepDetectorTests.testDominantAxisDoesNotStayStuckWhenGripChanges' started at 2026-10-07 03:57:40.333
+Test Case 'RepDetectorTests.testDominantAxisDoesNotStayStuckWhenGripChanges' passed (0.001 seconds)
+Test Case 'RepDetectorTests.testInvalidSensitivityFallsBackToDefault' started at 2026-10-07 03:57:40.334
+Test Case 'RepDetectorTests.testInvalidSensitivityFallsBackToDefault' passed (0.002 seconds)
+Test Case 'RepDetectorTests.testInvalidValuesAndNonIncreasingTimestampsAreIgnored' started at 2026-10-07 03:57:40.336
+Test Case 'RepDetectorTests.testInvalidValuesAndNonIncreasingTimestampsAreIgnored' passed (0.103 seconds)
+Test Case 'RepDetectorTests.testIrregularButContinuousSamplingKeepsOneCountPerCycle' started at 2026-10-07 03:57:40.440
+Test Case 'RepDetectorTests.testIrregularButContinuousSamplingKeepsOneCountPerCycle' passed (0.001 seconds)
+Test Case 'RepDetectorTests.testOneCountPerFullSignedCycleAcrossProfilesAxesAndPolarity' started at 2026-10-07 03:57:40.441
+Test Case 'RepDetectorTests.testOneCountPerFullSignedCycleAcrossProfilesAxesAndPolarity' passed (0.06 seconds)
+Test Case 'RepDetectorTests.testResetClearsCounterAndSensorState' started at 2026-10-07 03:57:40.501
+Test Case 'RepDetectorTests.testResetClearsCounterAndSensorState' passed (0.001 seconds)
+Test Case 'RepDetectorTests.testSampleGapAbandonsPartialCycleAndPreservesCount' started at 2026-10-07 03:57:40.502
+Test Case 'RepDetectorTests.testSampleGapAbandonsPartialCycleAndPreservesCount' passed (0.102 seconds)
+Test Case 'RepDetectorTests.testSensitivityRejectsSmallMovementAtLowSetting' started at 2026-10-07 03:57:40.604
+Test Case 'RepDetectorTests.testSensitivityRejectsSmallMovementAtLowSetting' passed (0.002 seconds)
+Test Case 'RepDetectorTests.testShortOppositeShocksDoNotCount' started at 2026-10-07 03:57:40.606
+Test Case 'RepDetectorTests.testShortOppositeShocksDoNotCount' passed (0.001 seconds)
+Test Case 'RepDetectorTests.testStationaryWristAndSmallDeterministicNoiseDoNotCount' started at 2026-10-07 03:57:40.607
+Test Case 'RepDetectorTests.testStationaryWristAndSmallDeterministicNoiseDoNotCount' passed (0.023 seconds)
+Test Case 'RepDetectorTests.testVeryFastAndVerySlowCyclesAreRejected' started at 2026-10-07 03:57:40.630
+Test Case 'RepDetectorTests.testVeryFastAndVerySlowCyclesAreRejected' passed (0.006 seconds)
+Test Suite 'RepDetectorTests' passed at 2026-10-07 03:57:40.636
+	 Executed 14 tests, with 0 failures (0 unexpected) in 0.409 (0.409) seconds
+Test Suite 'WorkoutEngineTests' started at 2026-10-07 03:57:40.637
+Test Case 'WorkoutEngineTests.testAllValidTransitionSnapshotsDecode' started at 2026-10-07 03:57:40.637
+Test Case 'WorkoutEngineTests.testAllValidTransitionSnapshotsDecode' passed (0.003 seconds)
+Test Case 'WorkoutEngineTests.testCompletingAgainCannotDuplicateSet' started at 2026-10-07 03:57:40.639
+Test Case 'WorkoutEngineTests.testCompletingAgainCannotDuplicateSet' passed (0.0 seconds)
+Test Case 'WorkoutEngineTests.testEmptyPlanCanFinishButCannotStart' started at 2026-10-07 03:57:40.640
+Test Case 'WorkoutEngineTests.testEmptyPlanCanFinishButCannotStart' passed (0.0 seconds)
+Test Case 'WorkoutEngineTests.testExplicitStartAndManualCorrection' started at 2026-10-07 03:57:40.640
+Test Case 'WorkoutEngineTests.testExplicitStartAndManualCorrection' passed (0.0 seconds)
+Test Case 'WorkoutEngineTests.testExtraSetsDoNotReplaceSkippedExerciseInCompletion' started at 2026-10-07 03:57:40.640
+Test Case 'WorkoutEngineTests.testExtraSetsDoNotReplaceSkippedExerciseInCompletion' passed (0.0 seconds)
+Test Case 'WorkoutEngineTests.testFinishIdempotentAndDiscardsUnconfirmedReps' started at 2026-10-07 03:57:40.640
+Test Case 'WorkoutEngineTests.testFinishIdempotentAndDiscardsUnconfirmedReps' passed (0.0 seconds)
+Test Case 'WorkoutEngineTests.testFinishedRecordUsesIDPersistedBeforeFinish' started at 2026-10-07 03:57:40.641
+Test Case 'WorkoutEngineTests.testFinishedRecordUsesIDPersistedBeforeFinish' passed (0.0 seconds)
+Test Case 'WorkoutEngineTests.testInvalidDraftIndexCounterAndPhaseAreRejected' started at 2026-10-07 03:57:40.641
+Test Case 'WorkoutEngineTests.testInvalidDraftIndexCounterAndPhaseAreRejected' passed (0.003 seconds)
+Test Case 'WorkoutEngineTests.testNextExerciseDuringPauseStaysPausedAndResumesReady' started at 2026-10-07 03:57:40.645
+Test Case 'WorkoutEngineTests.testNextExerciseDuringPauseStaysPausedAndResumesReady' passed (0.001 seconds)
+Test Case 'WorkoutEngineTests.testNextExerciseExplicitAndCannotOverrun' started at 2026-10-07 03:57:40.645
+Test Case 'WorkoutEngineTests.testNextExerciseExplicitAndCannotOverrun' passed (0.0 seconds)
+Test Case 'WorkoutEngineTests.testPauseRestFreezesRemainingTime' started at 2026-10-07 03:57:40.646
+Test Case 'WorkoutEngineTests.testPauseRestFreezesRemainingTime' passed (0.0 seconds)
+Test Case 'WorkoutEngineTests.testPauseResumeActivePreservesCorrectedRepsButBlocksSensorUpdates' started at 2026-10-07 03:57:40.646
+Test Case 'WorkoutEngineTests.testPauseResumeActivePreservesCorrectedRepsButBlocksSensorUpdates' passed (0.0 seconds)
+Test Case 'WorkoutEngineTests.testPausedDraftRoundTripCanResume' started at 2026-10-07 03:57:40.646
+Test Case 'WorkoutEngineTests.testPausedDraftRoundTripCanResume' passed (0.0 seconds)
+Test Case 'WorkoutEngineTests.testPausingExpiredRestResumesReady' started at 2026-10-07 03:57:40.646
+Test Case 'WorkoutEngineTests.testPausingExpiredRestResumesReady' passed (0.0 seconds)
+Test Case 'WorkoutEngineTests.testRestExpiryStillRequiresExplicitStart' started at 2026-10-07 03:57:40.647
+Test Case 'WorkoutEngineTests.testRestExpiryStillRequiresExplicitStart' passed (0.001 seconds)
+Test Case 'WorkoutEngineTests.testSkipRestAndZeroRestLeaveReady' started at 2026-10-07 03:57:40.647
+Test Case 'WorkoutEngineTests.testSkipRestAndZeroRestLeaveReady' passed (0.0 seconds)
+Test Suite 'WorkoutEngineTests' passed at 2026-10-07 03:57:40.647
+	 Executed 16 tests, with 0 failures (0 unexpected) in 0.011 (0.011) seconds
+Test Suite 'debug.xctest' passed at 2026-10-07 03:57:40.647
+	 Executed 37 tests, with 0 failures (0 unexpected) in 0.543 (0.543) seconds
+Test Suite 'All tests' passed at 2026-10-07 03:57:40.647
+	 Executed 37 tests, with 0 failures (0 unexpected) in 0.543 (0.543) seconds
+◇ Test run started.
+↳ Testing Library Version: 6.0.3 (18c42c19cac3faf)
+✔ Test run with 0 tests passed after 0.001 seconds.

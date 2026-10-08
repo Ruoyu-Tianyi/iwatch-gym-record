@@ -1,0 +1,1 @@
+PASS: 20 store persistence/sync checks (test transport; real WCSession requires paired Apple devices).

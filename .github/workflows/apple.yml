@@ -1,0 +1,59 @@
+name: Native Apple build and core tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: apple-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: macos-15
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode 26 or newer
+        shell: bash
+        run: |
+          candidate=$(python3 -c 'import pathlib,re; p=[p for p in pathlib.Path("/Applications").glob("Xcode_*.app") if re.search(r"Xcode_\d",p.name) and "beta" not in p.name.lower()]; print(max(p,key=lambda x:tuple(map(int,re.findall(r"\d+",x.name))),default=""))')
+          if [ -n "$candidate" ]; then sudo xcode-select -s "$candidate/Contents/Developer"; fi
+          xcodebuild -version
+          version=$(xcodebuild -version | head -1 | awk '{print $2}' | cut -d. -f1)
+          if [ "$version" -lt 26 ]; then echo 'Select a runner with Xcode 26+ SDKs.'; exit 1; fi
+      - name: Install project generator
+        run: brew install xcodegen
+      - name: Generate project
+        run: xcodegen generate --spec project.yml
+      - name: Test the portable engine
+        run: |
+          mkdir -p artifacts
+          set -o pipefail
+          ./scripts/test-core.sh 2>&1 | tee artifacts/core-tests.log
+      - name: Test persistence and merge logic with transport stub
+        run: |
+          set -o pipefail
+          ./scripts/test-sync.sh 2>&1 | tee artifacts/sync-tests.log
+      - name: Validate project resources
+        run: python3 scripts/validate-project.py
+      - name: Build both Apple applications without signing
+        run: ./scripts/build-apple.sh
+      - name: Launch simulator apps and capture previews
+        run: ./scripts/preview-apple.sh
+      - name: Upload build logs, test results and previews
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RepFlow-Apple-${{ github.run_number }}
+          path: artifacts/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Write build summary
+        if: always()
+        run: |
+          {
+            echo '## 组迹云端构建'
+            echo '请下载本页面的 RepFlow-Apple artifact 查看日志、Xcode 结果和截图。'
+            echo '模拟器构建供验证界面使用；iPhone / Apple Watch 真机安装通过已签名的 TestFlight 构建。'
+          } >> "$GITHUB_STEP_SUMMARY"

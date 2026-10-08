@@ -1,0 +1,69 @@
+require "base64"
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Build the iPhone app with its embedded Watch app and upload to TestFlight"
+  lane :beta do
+    required = %w[ASC_KEY_ID ASC_ISSUER_ID ASC_API_KEY_P8 MATCH_PASSWORD APPLE_TEAM_ID APP_BUNDLE_ID GITHUB_TOKEN GITHUB_REPOSITORY]
+    missing = required.select { |name| ENV[name].to_s.strip.empty? }
+    UI.user_error!("Missing configuration: #{missing.join(', ')}") unless missing.empty?
+
+    phone_id = ENV.fetch("APP_BUNDLE_ID")
+    watch_id = "#{phone_id}.watchkitapp"
+    team_id = ENV.fetch("APPLE_TEAM_ID")
+    api_key = app_store_connect_api_key(
+      key_id: ENV.fetch("ASC_KEY_ID"),
+      issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+      key_content: ENV.fetch("ASC_API_KEY_P8"),
+      duration: 1200,
+      in_house: false
+    )
+
+    setup_ci
+    git_authorization = Base64.strict_encode64("x-access-token:#{ENV.fetch('GITHUB_TOKEN')}")
+    puts "::add-mask::#{git_authorization}" if ENV["GITHUB_ACTIONS"] == "true"
+    match(
+      type: "appstore",
+      app_identifier: [phone_id, watch_id],
+      team_id: team_id,
+      api_key: api_key,
+      git_url: "https://github.com/#{ENV.fetch('GITHUB_REPOSITORY')}.git",
+      git_branch: "signing",
+      git_basic_authorization: git_authorization,
+      readonly: false
+    )
+
+    profiles = lane_context[SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING]
+    [["RepFlow", phone_id, "iphoneos*"], ["RepFlowWatch", watch_id, "watchos*"]].each do |target, identifier, sdk|
+      UI.user_error!("Provisioning profile missing for #{identifier}") unless profiles[identifier]
+      update_code_signing_settings(
+        path: "RepFlow.xcodeproj",
+        targets: [target],
+        build_configurations: ["Release"],
+        use_automatic_signing: false,
+        team_id: team_id,
+        code_sign_identity: "Apple Distribution",
+        profile_name: profiles.fetch(identifier),
+        sdk: sdk
+      )
+    end
+
+    build_app(
+      project: "RepFlow.xcodeproj",
+      scheme: "RepFlow",
+      configuration: "Release",
+      export_method: "app-store",
+      output_directory: "artifacts/release",
+      output_name: "RepFlow.ipa",
+      buildlog_path: "artifacts/release/build-logs",
+      export_options: { signingStyle: "manual", teamID: team_id, provisioningProfiles: profiles }
+    )
+    upload_to_testflight(
+      api_key: api_key,
+      ipa: "artifacts/release/RepFlow.ipa",
+      skip_waiting_for_build_processing: true,
+      distribute_external: false
+    )
+  end
+end

@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C55EC77304D235646C2D0F2 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBCD1AD50195550596528A /* HistoryView.swift */; };
+		31F97B4B06883A56708E8749 /* ConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796075127C72B2CA6ACE46F4 /* ConnectivityService.swift */; };
+		3F10C72A77FC8BF407318F50 /* PhoneTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E25AA5722AA0AD1E57F626 /* PhoneTheme.swift */; };
+		40874366C2CA8E50567D8567 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C15049FFBE9EB92CFB4384BB /* PrivacyInfo.xcprivacy */; };
+		457114456B9B19B5C48CB138 /* PlanViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5C5F12147DA50F674AE174 /* PlanViews.swift */; };
+		55AAAF40590F08DAB665B1CC /* ExerciseEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A59DFBDD4CA0D0F9B32252 /* ExerciseEditorView.swift */; };
+		573C94C8225452EE15B0C0F1 /* RepFlowWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35330DAA53DC2B0158D86 /* RepFlowWatchApp.swift */; };
+		595EEE3C675118F5AA2F0104 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54650C441CB37E0ED5548E75 /* AppStore.swift */; };
+		6F6FC2DFBCF12C7E27742935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB8F62F746E2A22331B1BE6F /* Assets.xcassets */; };
+		74F4E4E89F933BF519E179C6 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54650C441CB37E0ED5548E75 /* AppStore.swift */; };
+		7AF6A23389D378C58ECA7CF7 /* WatchPlanEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB31C00DD403CC379EAEEAEF /* WatchPlanEditor.swift */; };
+		7BF0CB011640015698CDC10C /* RepFlowCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8161BE44FE40D10DD74B1CE7 /* RepFlowCore */; };
+		82BBBBB9B9B0FF31981013BC /* RepFlowWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 92CC32FD3D987E056AD8DBA8 /* RepFlowWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		870A19B95153C9C11B5F585B /* WorkoutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1EFD43271DAB13479E0E82 /* WorkoutCoordinator.swift */; };
+		8B8E5F1E6E95893A204E1909 /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA6F15DA664F577B0B9754 /* OverviewView.swift */; };
+		99FACC9CB6EDF478E288FA8D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DE70E4D111636BB631BBA /* SettingsView.swift */; };
+		ABF23E7A0C7E7E8B83EE9AF1 /* HealthWorkoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F96EAB5F8DDE5B43C33C5F /* HealthWorkoutService.swift */; };
+		AE4C63FCB8E2EBAFDEB0180C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C15049FFBE9EB92CFB4384BB /* PrivacyInfo.xcprivacy */; };
+		C71EA3A44744D34C3FEE4D7B /* MotionCountingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9F0EF2A7A733FAEA1E946 /* MotionCountingService.swift */; };
+		CB3D9294FF057AA2245EF40A /* RepFlowPhoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491ACCB0D07752C059EAF69D /* RepFlowPhoneApp.swift */; };
+		DA5920658BBC29F682370918 /* WatchViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BD23CA0914AFEDEFFC35E /* WatchViews.swift */; };
+		E3AD3FA2C3AE030EC7ABBC66 /* PlanGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E551C668CFCB1D45BA92 /* PlanGeneratorView.swift */; };
+		E5D64DB56ED65E72362F112E /* RepFlowCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7D4D6713032A622313ACC819 /* RepFlowCore */; };
+		EF0E4427F424BA5B86AAA8E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35210E389152D0D305C01327 /* Assets.xcassets */; };
+		FA19E0980A0090C93DE217F2 /* ConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796075127C72B2CA6ACE46F4 /* ConnectivityService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2088464C94BB0C079F3DBE9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DED7A0AF8E34957B445B7198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D42ED8D1A396FFFB4BDDA5D;
+			remoteInfo = RepFlowWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		55644B2F96E0C6E1A5D50CF5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				82BBBBB9B9B0FF31981013BC /* RepFlowWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2AF35330DAA53DC2B0158D86 /* RepFlowWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepFlowWatchApp.swift; sourceTree = "<group>"; };
+		2E0DE70E4D111636BB631BBA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		35210E389152D0D305C01327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38E25AA5722AA0AD1E57F626 /* PhoneTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTheme.swift; sourceTree = "<group>"; };
+		43E6E551C668CFCB1D45BA92 /* PlanGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanGeneratorView.swift; sourceTree = "<group>"; };
+		491ACCB0D07752C059EAF69D /* RepFlowPhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepFlowPhoneApp.swift; sourceTree = "<group>"; };
+		4C5C5F12147DA50F674AE174 /* PlanViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViews.swift; sourceTree = "<group>"; };
+		54650C441CB37E0ED5548E75 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		5D07D86F4D81E5FB80A8A75D /* RepFlow */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RepFlow; path = .; sourceTree = SOURCE_ROOT; };
+		5FCA7F8B230055E9CADECADC /* RepFlow.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RepFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E1EFD43271DAB13479E0E82 /* WorkoutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCoordinator.swift; sourceTree = "<group>"; };
+		796075127C72B2CA6ACE46F4 /* ConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityService.swift; sourceTree = "<group>"; };
+		7D0BD23CA0914AFEDEFFC35E /* WatchViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViews.swift; sourceTree = "<group>"; };
+		92CC32FD3D987E056AD8DBA8 /* RepFlowWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepFlowWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3B9F0EF2A7A733FAEA1E946 /* MotionCountingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCountingService.swift; sourceTree = "<group>"; };
+		ABAA6F15DA664F577B0B9754 /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
+		BB31C00DD403CC379EAEEAEF /* WatchPlanEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPlanEditor.swift; sourceTree = "<group>"; };
+		C15049FFBE9EB92CFB4384BB /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		C2F96EAB5F8DDE5B43C33C5F /* HealthWorkoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthWorkoutService.swift; sourceTree = "<group>"; };
+		C9A59DFBDD4CA0D0F9B32252 /* ExerciseEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseEditorView.swift; sourceTree = "<group>"; };
+		D3DBCD1AD50195550596528A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		EB8F62F746E2A22331B1BE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0DD5ADA94B2D9BF1F6AA337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D64DB56ED65E72362F112E /* RepFlowCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC6FA75B6EC9D23F9792CB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BF0CB011640015698CDC10C /* RepFlowCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09BEF45CCE057C2BE2802022 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				5D07D86F4D81E5FB80A8A75D /* RepFlow */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		2EB4B315A30075863A654A21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C15049FFBE9EB92CFB4384BB /* PrivacyInfo.xcprivacy */,
+				A11DE21C1C9B2D484E7FB680 /* Phone */,
+				F626CE5BC2B8DD3E8206B1FD /* Watch */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		49BCA107F40311E1C1DB38AE /* WatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				C2F96EAB5F8DDE5B43C33C5F /* HealthWorkoutService.swift */,
+				A3B9F0EF2A7A733FAEA1E946 /* MotionCountingService.swift */,
+				2AF35330DAA53DC2B0158D86 /* RepFlowWatchApp.swift */,
+				BB31C00DD403CC379EAEEAEF /* WatchPlanEditor.swift */,
+				7D0BD23CA0914AFEDEFFC35E /* WatchViews.swift */,
+				6E1EFD43271DAB13479E0E82 /* WorkoutCoordinator.swift */,
+			);
+			path = WatchApp;
+			sourceTree = "<group>";
+		};
+		560FC2A53D073C4E1ACF0E51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FCA7F8B230055E9CADECADC /* RepFlow.app */,
+				92CC32FD3D987E056AD8DBA8 /* RepFlowWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A11DE21C1C9B2D484E7FB680 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				EB8F62F746E2A22331B1BE6F /* Assets.xcassets */,
+			);
+			path = Phone;
+			sourceTree = "<group>";
+		};
+		BFE168A34CA80282F98FA50B = {
+			isa = PBXGroup;
+			children = (
+				09BEF45CCE057C2BE2802022 /* Packages */,
+				F76E7CB794E97AAABA5C059A /* PhoneApp */,
+				2EB4B315A30075863A654A21 /* Resources */,
+				EF4E9B70123F390DC1543735 /* Shared */,
+				49BCA107F40311E1C1DB38AE /* WatchApp */,
+				560FC2A53D073C4E1ACF0E51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF4E9B70123F390DC1543735 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				54650C441CB37E0ED5548E75 /* AppStore.swift */,
+				796075127C72B2CA6ACE46F4 /* ConnectivityService.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F626CE5BC2B8DD3E8206B1FD /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				35210E389152D0D305C01327 /* Assets.xcassets */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		F76E7CB794E97AAABA5C059A /* PhoneApp */ = {
+			isa = PBXGroup;
+			children = (
+				C9A59DFBDD4CA0D0F9B32252 /* ExerciseEditorView.swift */,
+				D3DBCD1AD50195550596528A /* HistoryView.swift */,
+				ABAA6F15DA664F577B0B9754 /* OverviewView.swift */,
+				38E25AA5722AA0AD1E57F626 /* PhoneTheme.swift */,
+				43E6E551C668CFCB1D45BA92 /* PlanGeneratorView.swift */,
+				4C5C5F12147DA50F674AE174 /* PlanViews.swift */,
+				491ACCB0D07752C059EAF69D /* RepFlowPhoneApp.swift */,
+				2E0DE70E4D111636BB631BBA /* SettingsView.swift */,
+			);
+			path = PhoneApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D42ED8D1A396FFFB4BDDA5D /* RepFlowWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DC5BA0300D22596A9C2A5BE /* Build configuration list for PBXNativeTarget "RepFlowWatch" */;
+			buildPhases = (
+				1595052E1AA38D31F887BB5A /* Sources */,
+				58B11BC8CA3948DBF6D43A78 /* Resources */,
+				FAC6FA75B6EC9D23F9792CB7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RepFlowWatch;
+			packageProductDependencies = (
+				8161BE44FE40D10DD74B1CE7 /* RepFlowCore */,
+			);
+			productName = RepFlowWatch;
+			productReference = 92CC32FD3D987E056AD8DBA8 /* RepFlowWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C53C896BA858D77FA4AC8412 /* RepFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B1F65EBD8598CFBB25FF1A8 /* Build configuration list for PBXNativeTarget "RepFlow" */;
+			buildPhases = (
+				075477F782F120713DB31BC3 /* Sources */,
+				ED43E19AEC8D229BCC5072C0 /* Resources */,
+				F0DD5ADA94B2D9BF1F6AA337 /* Frameworks */,
+				55644B2F96E0C6E1A5D50CF5 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F5423E40770A79340C0445F /* PBXTargetDependency */,
+			);
+			name = RepFlow;
+			packageProductDependencies = (
+				7D4D6713032A622313ACC819 /* RepFlowCore */,
+			);
+			productName = RepFlow;
+			productReference = 5FCA7F8B230055E9CADECADC /* RepFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DED7A0AF8E34957B445B7198 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4D42ED8D1A396FFFB4BDDA5D = {
+						ProvisioningStyle = Automatic;
+					};
+					C53C896BA858D77FA4AC8412 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D1251993E6DEA0CDA90A1754 /* Build configuration list for PBXProject "RepFlow" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = BFE168A34CA80282F98FA50B;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				48DEFFB3E8482E07B7FABAF7 /* XCLocalSwiftPackageReference "." */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C53C896BA858D77FA4AC8412 /* RepFlow */,
+				4D42ED8D1A396FFFB4BDDA5D /* RepFlowWatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58B11BC8CA3948DBF6D43A78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF0E4427F424BA5B86AAA8E7 /* Assets.xcassets in Resources */,
+				AE4C63FCB8E2EBAFDEB0180C /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED43E19AEC8D229BCC5072C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6FC2DFBCF12C7E27742935 /* Assets.xcassets in Resources */,
+				40874366C2CA8E50567D8567 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		075477F782F120713DB31BC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				595EEE3C675118F5AA2F0104 /* AppStore.swift in Sources */,
+				31F97B4B06883A56708E8749 /* ConnectivityService.swift in Sources */,
+				55AAAF40590F08DAB665B1CC /* ExerciseEditorView.swift in Sources */,
+				2C55EC77304D235646C2D0F2 /* HistoryView.swift in Sources */,
+				8B8E5F1E6E95893A204E1909 /* OverviewView.swift in Sources */,
+				3F10C72A77FC8BF407318F50 /* PhoneTheme.swift in Sources */,
+				E3AD3FA2C3AE030EC7ABBC66 /* PlanGeneratorView.swift in Sources */,
+				457114456B9B19B5C48CB138 /* PlanViews.swift in Sources */,
+				CB3D9294FF057AA2245EF40A /* RepFlowPhoneApp.swift in Sources */,
+				99FACC9CB6EDF478E288FA8D /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1595052E1AA38D31F887BB5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F4E4E89F933BF519E179C6 /* AppStore.swift in Sources */,
+				FA19E0980A0090C93DE217F2 /* ConnectivityService.swift in Sources */,
+				ABF23E7A0C7E7E8B83EE9AF1 /* HealthWorkoutService.swift in Sources */,
+				C71EA3A44744D34C3FEE4D7B /* MotionCountingService.swift in Sources */,
+				573C94C8225452EE15B0C0F1 /* RepFlowWatchApp.swift in Sources */,
+				7AF6A23389D378C58ECA7CF7 /* WatchPlanEditor.swift in Sources */,
+				DA5920658BBC29F682370918 /* WatchViews.swift in Sources */,
+				870A19B95153C9C11B5F585B /* WorkoutCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F5423E40770A79340C0445F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D42ED8D1A396FFFB4BDDA5D /* RepFlowWatch */;
+			targetProxy = 2088464C94BB0C079F3DBE9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3B7FD976257EE49430CCC25A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Resources/Phone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.RepFlow;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		427FC29D32B18264BBF6D873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Resources/Watch/RepFlowWatch.entitlements;
+				INFOPLIST_FILE = Resources/Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.RepFlow.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		A72C4D56FA50D10B2297E18C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Resources/Watch/RepFlowWatch.entitlements;
+				INFOPLIST_FILE = Resources/Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.RepFlow.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		A7CA9A7E6578BA139EEE988A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		A96389C6275C0C911825C90B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		F787F9150378CB18D65CBE7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Resources/Phone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.RepFlow;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DC5BA0300D22596A9C2A5BE /* Build configuration list for PBXNativeTarget "RepFlowWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				427FC29D32B18264BBF6D873 /* Debug */,
+				A72C4D56FA50D10B2297E18C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7B1F65EBD8598CFBB25FF1A8 /* Build configuration list for PBXNativeTarget "RepFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B7FD976257EE49430CCC25A /* Debug */,
+				F787F9150378CB18D65CBE7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D1251993E6DEA0CDA90A1754 /* Build configuration list for PBXProject "RepFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A96389C6275C0C911825C90B /* Debug */,
+				A7CA9A7E6578BA139EEE988A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		48DEFFB3E8482E07B7FABAF7 /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D4D6713032A622313ACC819 /* RepFlowCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RepFlowCore;
+		};
+		8161BE44FE40D10DD74B1CE7 /* RepFlowCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RepFlowCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DED7A0AF8E34957B445B7198 /* Project object */;
+}
