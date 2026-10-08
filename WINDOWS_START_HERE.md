@@ -1,6 +1,6 @@
 # 在 Windows 启动组迹云端构建
 
-你的仓库已经创建：[Ruoyu-Tianyi/iwatch-gym-record](https://github.com/Ruoyu-Tianyi/iwatch-gym-record)。本包包含完整源码和自动化流程，尚未通过本地连接上传到该仓库；下面的脚本使用你在 Windows 上的 GitHub 登录完成上传。
+你的仓库已经创建：[Ruoyu-Tianyi/iwatch-gym-record](https://github.com/Ruoyu-Tianyi/iwatch-gym-record)。源码与自动化流程已于 2026-10-08 上传，首次 macOS 云端构建全部通过。下面的脚本可用于后续手动触发构建。
 
 ## 第一次操作
 
@@ -36,4 +36,5 @@ gh auth refresh --hostname github.com --scopes workflow
 
 会员激活后，本包提供 `setup-testflight-windows.ps1` 和手动触发的 `Upload to TestFlight` 工作流。它们使用云端签名，避免要求你在 Mac 上手工导出证书。一次性网页配置、Secrets 设置、手机与手表安装步骤见[完整 Windows 教程](docs/WINDOWS_CLOUD_GUIDE.md)。
 
-签名配置前需将仓库设为 Private。不要把 `.p8`、证书密码或其他凭据上传到聊天或源码。当前交付尚未执行实际 macOS 云端构建和 TestFlight 上传，脚本、工作流配置及源码验证结果见[验证记录](docs/VERIFICATION.md)。
+签名配置前需将仓库设为 Private。不要把 `.p8`、证书密码或其他凭据上传到聊天或源码。当前已通过实际 macOS 云端构建，尚未执行 TestFlight 上传，脚本、工作流配置及源码验证结果见[验证记录](docs/VERIFICATION.md)。
+

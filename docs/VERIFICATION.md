@@ -59,3 +59,14 @@ CI 配置已提供，但尚未成功推送并触发远端 CI，因此不能把�
 - JSON 导出可用于留存和人工恢复参考，本版没有导入界面。设备时钟明显不一致可能影响基于时间的编辑合并。
 
 完成上述 Apple 环境验证后，应更新本记录和验收表，再以实测结果决定辅助计次是否对外开放。
+
+## 首次 GitHub macOS 构建进展（2026-10-08）
+
+源码已同步至 `Ruoyu-Tianyi/iwatch-gym-record`，首个源码提交为 `153db0503a3f019bca35a358c6f72c34e059dc5e`。
+
+构建记录：https://github.com/Ruoyu-Tianyi/iwatch-gym-record/actions/runs/37747649174
+
+本次云端已通过 Xcode 选择、工程生成、核心测试、存储合并检查、32 项工程资源检查，以及 iPhone / Apple Watch 两端无签名模拟器编译。模拟器启动与截图步骤通过，整次工作流最终状态为 success。产物 RepFlow-Apple-1 已上传，包含日志、构建结果与可用模拟器截图；到期日为 2026-10-22。
+
+以上结果取代前文“尚未上传或触发远端 CI”“Apple 平台编译未执行”的历史状态；签名、配对真机、真实辅助计次准确率、后台训练及 TestFlight 仍未验证。仓库当前公开，现有签名流程要求私有仓库和用户的 Apple Developer / App Store Connect 配置。
+

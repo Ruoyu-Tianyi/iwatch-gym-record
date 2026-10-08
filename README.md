@@ -2,7 +2,7 @@
 
 一款原生中文 Apple Watch 健身记录 App，配有 iPhone 计划管理和历史记录 App。训练时在手表查看当前动作、第几组和次数；使用腕部运动传感器辅助估计次数，再由你确认完成本组和切换动作。
 
-**交付状态：可交给 Mac/Xcode 继续构建和发布的完整源码工程。当前交付环境没有 macOS、Xcode 或 Apple Watch，尚未完成 Apple 平台编译、签名、真机验证或 TestFlight。辅助计次尚无真实训练准确率验证；不能把源码交付等同于已审核上架的 App。**
+**交付状态：可交给 Mac/Xcode 继续构建和发布的完整源码工程。2026-10-08 已通过 GitHub macOS 云端核心测试、两端无签名模拟器编译及模拟器预览流程；签名、真机验证及 TestFlight 尚未完成。辅助计次尚无真实训练准确率验证；不能把源码交付等同于已审核上架的 App。**
 
 ## 首版功能
 
@@ -78,3 +78,4 @@ xcodebuild -project RepFlow.xcodeproj -scheme RepFlowWatch -configuration Debug 
 - [隐私政策模板](docs/PRIVACY_POLICY.md)：发布前替换运营主体、联系邮箱和公开 URL。
 
 未完成的发布工作集中在真实 Apple 环境验收、传感器标定、开发者身份与商店资料。每次修改 SDK、第三方库或数据流，都应重新核对隐私申报及审核说明。
+
